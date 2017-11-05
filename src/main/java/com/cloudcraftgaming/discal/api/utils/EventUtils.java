@@ -65,7 +65,7 @@ public class EventUtils {
 		return false;
 	}
 
-	static PreEvent copyEvent(long guildId, Event event) {
+	public static PreEvent copyEvent(long guildId, Event event) {
 		PreEvent pe = new PreEvent(guildId);
 		pe.setSummary(event.getSummary());
 		pe.setDescription(event.getDescription());
