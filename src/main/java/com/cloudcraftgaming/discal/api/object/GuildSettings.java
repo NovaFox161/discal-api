@@ -28,6 +28,8 @@ public class GuildSettings {
 	private boolean devGuild;
 	private Integer maxCalendars;
 
+	private boolean twelveHour;
+
 	private final ArrayList<String> dmAnnouncements = new ArrayList<>();
 
 	public GuildSettings(long _guildId) {
@@ -49,6 +51,8 @@ public class GuildSettings {
 		patronGuild = false;
 		devGuild = false;
 		maxCalendars = 1;
+
+		twelveHour = true;
 	}
 
 	//Getters
@@ -102,6 +106,10 @@ public class GuildSettings {
 
 	public Integer getMaxCalendars() {
 		return maxCalendars;
+	}
+
+	public boolean useTwelveHour() {
+		return twelveHour;
 	}
 
 	public ArrayList<String> getDmAnnouncements() {
@@ -169,6 +177,10 @@ public class GuildSettings {
 
 	public void setMaxCalendars(Integer _maxCalendars) {
 		maxCalendars = _maxCalendars;
+	}
+
+	public void setTwelveHour(boolean _twelveHour) {
+		twelveHour = _twelveHour;
 	}
 
 	public void setDmAnnouncementsFromString(String userList) {
